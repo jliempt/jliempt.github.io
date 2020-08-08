@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Example</title>
+        <title>Mapbox test</title>
+	<script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
     </head>
     <body>
-        <p>This is an example of a simple HTML page with one paragraph.</p>
+        <div id='map' style='width: 400px; height: 300px;'></div>
+	<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoiamxpZW1wdCIsImEiOiJjanpzZHNhOGwxZ3RjM2JuenBpcjN4eTh3In0.dnO_1v0NDfRMZBhv-hVvjQ';
+	var map = new mapboxgl.Map({
+	container: 'map',
+	style: 'mapbox://styles/mapbox/streets-v11',
+	center: [6.583557, 52.890678]
+	});
+	</script>
     </body>
 </html>
 
